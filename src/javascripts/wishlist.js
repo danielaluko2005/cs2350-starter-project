@@ -1,6 +1,7 @@
 
 import _ from 'lodash';
-import { addItemToCart } from './selected_product';
+import { getCart } from './main';
+import { displayCart } from './main';
 export let InitialWishList = []
 
 export function getWishList() {
@@ -165,7 +166,26 @@ function displayWishListProducts() {
     }
 }
 
-
+export function addItemToCart(funcCategory, funcIndexLocation, funcQuantity) {
+    let cart = getCart();
+  
+    for (let cartItem of cart) {
+      if (_.isEqual(cartItem.category, funcCategory) && cartItem.indexLocation == funcIndexLocation) {
+        cart = cart.filter(s => s.indexLocation !== funcIndexLocation);
+      }
+    }
+  
+    let cartItem = {
+      category: funcCategory,
+      indexLocation: funcIndexLocation,
+      quantity: funcQuantity
+    };
+  
+    cart.push(cartItem);
+    localStorage.setItem("CartItems", JSON.stringify(cart));
+    displayCart();
+  }
+  
 try {
     displayWishListProducts()
 }catch(e){
