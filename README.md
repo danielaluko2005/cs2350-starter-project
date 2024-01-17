@@ -1,5 +1,5 @@
 
-# DaniZon E-commerce Website
+# DaniZon E-commerce App
 Welcome to DaniZon, your ultimate destination for a delightful online shopping experience! DaniZon is an E-commerce website where you can explore a wide range of products, add them to your cart or wishlist, and enjoy secure payment processing.
 
 # Getting Started
