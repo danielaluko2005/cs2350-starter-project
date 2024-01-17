@@ -24,6 +24,7 @@ Wishlist: Save your favorite items for future consideration.
 
 # Technologies Used
 Frontend: HTML, CSS, JavaScript
+
 Backend: Node.js
 
 # License
